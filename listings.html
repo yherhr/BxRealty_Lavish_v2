@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties — Bx Realty Bathurst</title>
+  <link rel="icon" type="image/png" href="assets/images/bxrealty-logo.png" />
+  <meta name="theme-color" content="#21211f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="site-nav"></div>
+
+<div class="page-band">
+  <div class="container">
+    <span class="label">Bathurst &amp; Region</span>
+    <h1>Properties</h1>
+    <span class="rule"></span>
+    <p>Current listings for sale and rent across Bathurst and the surrounding region.</p>
+  </div>
+</div>
+
+<!-- Filter tabs -->
+<div style="background:var(--white);border-bottom:1px solid var(--light-grey);padding:16px 28px;">
+  <div class="container" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+    <button class="btn btn-dark" style="font-size:.68rem;padding:9px 20px;">All</button>
+    <button class="btn btn-ghost" style="font-size:.68rem;padding:9px 20px;">For Sale</button>
+    <button class="btn btn-ghost" style="font-size:.68rem;padding:9px 20px;">For Rent</button>
+    <a href="#past-sales" class="btn btn-ghost" style="font-size:.68rem;padding:9px 20px;margin-left:auto;">Past Sales &darr;</a>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <p style="background:var(--cream);border:1px dashed var(--silver);padding:18px;font-size:.875rem;color:var(--text-muted);text-align:center;margin-bottom:40px;">
+      &#x1F6A7; <strong>Developer note:</strong> This section will be populated via the chosen CRM integration. Placeholder cards shown below.
+    </p>
+    <div class="listing-grid">
+      <article class="listing-card"><div class="listing-img"><div class="listing-img-ph">Photo pending</div><span class="badge">For Sale</span></div><div class="listing-body"><div class="listing-price">$[Price]</div><div class="listing-addr">Address, Bathurst NSW 2795</div><div class="listing-feats"><span>&#x1F6CF; 4</span><span>&#x1F6C1; 2</span><span>&#x1F697; 2</span></div></div></article>
+      <article class="listing-card"><div class="listing-img"><div class="listing-img-ph">Photo pending</div><span class="badge">For Sale</span></div><div class="listing-body"><div class="listing-price">$[Price]</div><div class="listing-addr">Address, Bathurst NSW 2795</div><div class="listing-feats"><span>&#x1F6CF; 3</span><span>&#x1F6C1; 1</span><span>&#x1F697; 1</span></div></div></article>
+      <article class="listing-card"><div class="listing-img"><div class="listing-img-ph">Photo pending</div><span class="badge rent">For Rent</span></div><div class="listing-body"><div class="listing-price">$[pw]/wk</div><div class="listing-addr">Address, Bathurst NSW 2795</div><div class="listing-feats"><span>&#x1F6CF; 3</span><span>&#x1F6C1; 1</span><span>&#x1F697; 1</span></div></div></article>
+      <article class="listing-card"><div class="listing-img"><div class="listing-img-ph">Photo pending</div><span class="badge">For Sale</span></div><div class="listing-body"><div class="listing-price">$[Price]</div><div class="listing-addr">Address, Bathurst NSW 2795</div><div class="listing-feats"><span>&#x1F6CF; 5</span><span>&#x1F6C1; 3</span><span>&#x1F697; 2</span></div></div></article>
+      <article class="listing-card"><div class="listing-img"><div class="listing-img-ph">Photo pending</div><span class="badge rent">For Rent</span></div><div class="listing-body"><div class="listing-price">$[pw]/wk</div><div class="listing-addr">Address, Bathurst NSW 2795</div><div class="listing-feats"><span>&#x1F6CF; 2</span><span>&#x1F6C1; 1</span><span>&#x1F697; 1</span></div></div></article>
+      <article class="listing-card"><div class="listing-img"><div class="listing-img-ph">Photo pending</div><span class="badge">For Sale</span></div><div class="listing-body"><div class="listing-price">$[Price]</div><div class="listing-addr">Address, Bathurst NSW 2795</div><div class="listing-feats"><span>&#x1F6CF; 4</span><span>&#x1F6C1; 2</span><span>&#x1F697; 2</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- Past sales -->
+<section class="section section-cream" id="past-sales">
+  <div class="container">
+    <div class="sh"><span class="label">Track Record</span><h2>Past Sales</h2><span class="rule"></span></div>
+    <p style="color:var(--text-muted);text-align:center;padding:32px 0;">Past sales will appear here once the CRM integration is connected.</p>
+  </div>
+</section>
+
+<section class="section section-dark" style="text-align:center;">
+  <div class="container">
+    <h2>Thinking of Selling or Renting?</h2>
+    <span class="rule center"></span>
+    <p style="max-width:480px;margin:0 auto 28px;">Get a free, no-obligation market appraisal from our local team.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="appraisal.html" class="btn btn-gold">Request Free Appraisal</a>
+      <a href="tel:0498193223" class="btn btn-white">&#x1F4DE; 0498 193 223</a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="components.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Bx Realty Bathurst</title>
+  <link rel="icon" type="image/png" href="assets/images/bxrealty-logo.png" />
+  <meta name="theme-color" content="#21211f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="site-nav"></div>
+
+<div class="page-band">
+  <div class="container">
+    <span class="label">We'd Love to Hear From You</span>
+    <h1>Contact Us</h1>
+    <span class="rule"></span>
+    <p>Reach out with any questions. Our team will respond within one business day.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <h2>Get in Touch</h2>
+        <span class="rule"></span>
+        <div class="c-details">
+          <div class="c-item"><div class="c-icon">&#x1F4DE;</div><div><span class="c-label">Phone</span><a href="tel:0498193223" style="color:var(--gold);font-weight:600;">0498 193 223</a></div></div>
+          <div class="c-item"><div class="c-icon">&#x2709;</div><div><span class="c-label">Email</span><a href="mailto:ellie@bxrealty.com.au" style="color:var(--gold);">ellie@bxrealty.com.au</a></div></div>
+          <div class="c-item"><div class="c-icon">&#x1F4CD;</div><div><span class="c-label">Location</span><span>Bathurst, NSW 2795</span></div></div>
+          <div class="c-item"><div class="c-icon">&#x1F552;</div><div><span class="c-label">Hours</span><span>Mon – Fri: 8:30am – 5:30pm<br>Sat: By appointment</span></div></div>
+        </div>
+        <h4 style="margin-bottom:12px;letter-spacing:.06em;">Follow Us</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/ellie_agentchapman_realtor/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/profile.php?id=61573810007004" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="https://www.tiktok.com/@ellie.begg.realto" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+      <div class="form-card">
+        <h3 style="margin-bottom:4px;">Send Us a Message</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:24px;">We'll get back to you within one business day.</p>
+        <form id="contact-form" novalidate>
+          <div class="form-two">
+            <div class="fg"><label class="dark" for="ct-name">Full name *</label><input class="fc" type="text" id="ct-name" required /></div>
+            <div class="fg"><label class="dark" for="ct-phone">Phone</label><input class="fc" type="tel" id="ct-phone" /></div>
+          </div>
+          <div class="fg"><label class="dark" for="ct-email">Email *</label><input class="fc" type="email" id="ct-email" required /></div>
+          <div class="fg">
+            <label class="dark" for="ct-sub">Subject</label>
+            <select class="fc" id="ct-sub">
+              <option>General enquiry</option><option>Buying</option><option>Selling</option>
+              <option>Renting</option><option>Property management</option><option>Other</option>
+            </select>
+          </div>
+          <div class="fg"><label class="dark" for="ct-msg">Message *</label><textarea class="fc" id="ct-msg" rows="5" required></textarea></div>
+          <button type="submit" class="btn btn-gold" style="width:100%;">Send Message &rarr;</button>
+        </form>
+        <div id="ct-success" style="display:none;text-align:center;padding:40px 0;">
+          <div style="font-size:2.5rem;color:var(--gold);margin-bottom:12px;">&#x2713;</div>
+          <h3 style="margin-bottom:8px;">Message sent!</h3>
+          <p>Thanks — we'll be in touch within one business day.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Map placeholder -->
+    <div style="margin-top:56px;background:var(--cream);height:260px;display:flex;align-items:center;justify-content:center;border:1px solid var(--light-grey);color:var(--mid-grey);font-style:italic;font-size:.875rem;">
+      Google Map embed — configure with office address
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="components.js"></script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('ct-success').style.display = 'block';
+  });
+</script>
+</body>
+</html>

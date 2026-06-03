@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Market Appraisal — Bx Realty Bathurst</title>
+  <link rel="icon" type="image/png" href="assets/images/bxrealty-logo.png" />
+  <meta name="theme-color" content="#21211f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="site-nav"></div>
+
+<div class="page-band">
+  <div class="container">
+    <span class="label">Free &amp; No Obligation</span>
+    <h1>Market Appraisal</h1>
+    <span class="rule"></span>
+    <p>Find out what your property is worth in today's market. Our team will be in touch within 24 hours.</p>
+    <a href="tel:0498193223" class="btn btn-gold" style="margin-top:20px;">&#x1F4DE; &nbsp;Call Ellie Now — 0498 193 223</a>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="appraisal-layout">
+      <div>
+        <h2>How It Works</h2>
+        <span class="rule"></span>
+        <p>Getting a market appraisal from Bx Realty is simple and completely free.</p>
+        <div class="appraisal-steps">
+          <div class="a-step"><div class="step-n">1</div><div><h4>Submit your details</h4><p>Fill in the form with your property address and a convenient time.</p></div></div>
+          <div class="a-step"><div class="step-n">2</div><div><h4>We'll be in touch</h4><p>Our team will call you within 24 hours to confirm the appointment.</p></div></div>
+          <div class="a-step"><div class="step-n">3</div><div><h4>Get your appraisal</h4><p>We'll visit and provide a thorough, honest assessment of your property's market value.</p></div></div>
+        </div>
+        <div style="background:var(--cream);border:1px solid var(--light-grey);padding:24px;">
+          <h4 style="margin-bottom:8px;">Prefer to call?</h4>
+          <p style="font-size:.9rem;margin-bottom:14px;">Speak directly with Ellie — tap to call instantly.</p>
+          <a href="tel:0498193223" class="btn btn-gold">&#x1F4DE; &nbsp;0498 193 223</a>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3 style="margin-bottom:4px;">Appraisal Request Form</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:24px;">All fields marked * are required.</p>
+        <form id="appraisal-form" novalidate>
+          <div class="form-two">
+            <div class="fg"><label class="dark" for="ap-fn">First name *</label><input class="fc" type="text" id="ap-fn" required /></div>
+            <div class="fg"><label class="dark" for="ap-ln">Last name *</label><input class="fc" type="text" id="ap-ln" required /></div>
+          </div>
+          <div class="form-two">
+            <div class="fg"><label class="dark" for="ap-em">Email *</label><input class="fc" type="email" id="ap-em" required /></div>
+            <div class="fg"><label class="dark" for="ap-ph">Phone *</label><input class="fc" type="tel" id="ap-ph" required /></div>
+          </div>
+          <div class="fg"><label class="dark" for="ap-ad">Property address *</label><input class="fc" type="text" id="ap-ad" placeholder="123 Street, Bathurst NSW 2795" required /></div>
+          <div class="form-two">
+            <div class="fg">
+              <label class="dark" for="ap-ty">Appraisal type *</label>
+              <select class="fc" id="ap-ty" required>
+                <option value="">— Select —</option>
+                <option>Sale appraisal</option>
+                <option>Rental appraisal</option>
+                <option>Both sale &amp; rental</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label class="dark" for="ap-ti">Preferred contact time</label>
+              <select class="fc" id="ap-ti">
+                <option value="">— Any time —</option>
+                <option>Morning (8am – 12pm)</option>
+                <option>Afternoon (12pm – 5pm)</option>
+                <option>Evening (after 5pm)</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg"><label class="dark" for="ap-no">Anything else we should know?</label><textarea class="fc" id="ap-no" placeholder="e.g. bedrooms, recent renovations, your timeline…"></textarea></div>
+          <button type="submit" class="btn btn-gold" style="width:100%;font-size:.8rem;padding:14px;">Submit Appraisal Request &rarr;</button>
+          <p style="font-size:.72rem;color:var(--text-muted);text-align:center;margin-top:12px;">We will never share your details with third parties.</p>
+        </form>
+        <div id="ap-success" style="display:none;text-align:center;padding:40px 0;">
+          <div style="font-size:2.5rem;margin-bottom:12px;color:var(--gold);">&#x2713;</div>
+          <h3 style="margin-bottom:8px;">Request received!</h3>
+          <p>Thank you — we'll be in touch within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="components.js"></script>
+<script>
+  document.getElementById('appraisal-form').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('appraisal-form').style.display = 'none';
+    document.getElementById('ap-success').style.display = 'block';
+  });
+</script>
+</body>
+</html>
