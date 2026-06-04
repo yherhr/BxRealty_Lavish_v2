@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bx Realty — Coming Soon</title>
+  <meta name="description" content="Bx Realty — Something great is coming. Bathurst's newest real estate agency." />
+  <meta name="theme-color" content="#04050a" />
+  <link rel="icon" type="image/png" href="assets/images/bxrealty-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Keyframe animations only — all other styles are inline to avoid CSS conflicts -->
+  <style>
+    @keyframes blink   { 0%,100%{opacity:1} 50%{opacity:0} }
+    @keyframes fadeUp  { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes pulse   { 0%,100%{box-shadow:0 0 0 0 rgba(225,186,98,.4)} 70%{box-shadow:0 0 0 10px rgba(225,186,98,0)} }
+    @keyframes scroll  { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    @keyframes glow    { 0%,100%{text-shadow:0 0 20px rgba(225,186,98,.3)} 50%{text-shadow:0 0 60px rgba(225,186,98,.7), 0 0 120px rgba(225,186,98,.3)} }
+    @keyframes scanline{ 0%{top:-10%} 100%{top:110%} }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    ::selection {
+      background: rgba(225,186,98,.25);
+      color: #fff;
+    }
+
+    /* Scrolling ticker */
+    .ticker-wrap { overflow: hidden; width: 100%; }
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 28s linear infinite;
+    }
+    .ticker-track:hover { animation-play-state: paused; }
+  </style>
+</head>
+
+<body style="
+  background: #04050a;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+">
+
+  <!-- Subtle grid overlay -->
+  <div aria-hidden="true" style="
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+    background-size: 80px 80px;
+  "></div>
+
+  <!-- Animated scanline -->
+  <div aria-hidden="true" style="
+    position: fixed; left: 0; right: 0; height: 2px; z-index: 1; pointer-events: none;
+    background: linear-gradient(90deg, transparent, rgba(225,186,98,.12), transparent);
+    animation: scanline 7s linear infinite;
+  "></div>
+
+  <!-- ── Top bar ────────────────────────────────────────────── -->
+  <header style="
+    position: relative; z-index: 10;
+    padding: 20px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,.055);
+    animation: fadeUp .6s ease both;
+  ">
+    <!-- Logo -->
+    <div style="display:flex; align-items:center; gap:12px;">
+      <img src="assets/images/bxrealty-logo.png"
+           alt="Bx Realty"
+           style="height:40px; width:auto;" />
+      <div style="line-height:1.1;">
+        <div style="
+          font-size:.7rem; font-weight:700;
+          letter-spacing:.18em; text-transform:uppercase;
+          color:#e1ba62;
+        ">BX Realty</div>
+        <div style="
+          font-size:.55rem; color:rgba(255,255,255,.35);
+          letter-spacing:.2em; text-transform:uppercase;
+          font-family:'DM Mono', monospace;
+        ">Bathurst, NSW</div>
+      </div>
+    </div>
+
+    <!-- Status indicator -->
+    <div style="
+      display:flex; align-items:center; gap:8px;
+      font-family:'DM Mono', monospace;
+      font-size:.65rem; color:rgba(255,255,255,.4);
+      letter-spacing:.12em; text-transform:uppercase;
+    ">
+      <span style="
+        display:inline-block; width:7px; height:7px;
+        border-radius:50%; background:#e1ba62;
+        animation: pulse 2s infinite;
+      "></span>
+      /// Building in progress
+    </div>
+  </header>
+
+  <!-- ── Main content ───────────────────────────────────────── -->
+  <main style="
+    flex: 1; position: relative; z-index: 10;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 60px 24px; text-align: center;
+  ">
+
+    <!-- Eyebrow label -->
+    <div style="
+      font-family: 'DM Mono', monospace;
+      font-size: .7rem; font-weight: 400;
+      color: #e1ba62;
+      letter-spacing: .22em; text-transform: uppercase;
+      margin-bottom: 24px;
+      animation: fadeUp .7s ease .1s both;
+    ">// 001 — Status</div>
+
+    <!-- Main heading -->
+    <h1 style="
+      font-size: clamp(2.8rem, 9vw, 7.5rem);
+      font-weight: 900;
+      letter-spacing: -.02em;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 8px;
+      animation: fadeUp .7s ease .2s both, glow 4s ease-in-out 1s infinite;
+    ">Under</h1>
+
+    <h1 style="
+      font-size: clamp(2.8rem, 9vw, 7.5rem);
+      font-weight: 900;
+      letter-spacing: -.02em;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #e1ba62;
+      margin-bottom: 32px;
+      animation: fadeUp .7s ease .3s both;
+    ">Construction<span style="animation: blink 1s step-end infinite; color:#fff;">_</span></h1>
+
+    <!-- Rule -->
+    <div style="
+      width: 48px; height: 2px;
+      background: #e1ba62;
+      margin: 0 auto 32px;
+      animation: fadeUp .7s ease .4s both;
+    "></div>
+
+    <!-- Description -->
+    <p style="
+      max-width: 520px;
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 48px;
+      animation: fadeUp .7s ease .5s both;
+    ">
+      Something exceptional is on its way. Bx Realty is launching soon —
+      bringing a fresh, honest approach to real estate in Bathurst and the
+      surrounding region.
+    </p>
+
+    <!-- CTA button -->
+    <a href="https://yherhr.github.io/Max-Portfolio/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 36px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .75rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: #e1ba62;
+      border: 1px solid #e1ba62;
+      text-decoration: none;
+      transition: background .25s, color .25s;
+      animation: fadeUp .7s ease .6s both;
+    "
+    onmouseover="this.style.background='#e1ba62'; this.style.color='#04050a';"
+    onmouseout="this.style.background='transparent'; this.style.color='#e1ba62';">
+      Built by Max ↗
+    </a>
+
+    <!-- Code comment block -->
+    <div style="
+      margin-top: 72px;
+      font-family: 'DM Mono', monospace;
+      font-size: .68rem;
+      color: rgba(255,255,255,.2);
+      letter-spacing: .06em;
+      line-height: 1.9;
+      text-align: left;
+      border-left: 2px solid rgba(225,186,98,.2);
+      padding-left: 20px;
+      animation: fadeUp .7s ease .8s both;
+    ">
+      <div>/** bxrealty.com.au</div>
+      <div>&nbsp;* Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span style="color:rgba(225,186,98,.6);">BUILDING</span></div>
+      <div>&nbsp;* ETA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span style="color:rgba(255,255,255,.35);">Coming Soon</span></div>
+      <div>&nbsp;* Location&nbsp;&nbsp;: <span style="color:rgba(255,255,255,.35);">Bathurst, NSW 2795</span></div>
+      <div>&nbsp;* Developer&nbsp;: <span style="color:rgba(225,186,98,.6);">Max Builds Websites</span></div>
+      <div>&nbsp;*/</div>
+    </div>
+
+  </main>
+
+  <!-- ── Scrolling ticker ───────────────────────────────────── -->
+  <div style="
+    position: relative; z-index: 10;
+    border-top: 1px solid rgba(255,255,255,.055);
+    border-bottom: 1px solid rgba(255,255,255,.055);
+    padding: 14px 0;
+    overflow: hidden;
+  ">
+    <div class="ticker-wrap">
+      <div class="ticker-track" style="
+        font-family: 'DM Mono', monospace;
+        font-size: .65rem; font-weight: 500;
+        letter-spacing: .16em; text-transform: uppercase;
+        color: rgba(255,255,255,.22);
+        white-space: nowrap;
+      ">
+        <!-- Two copies for seamless loop -->
+        <span style="padding-right:60px;">BX REALTY ✦ COMING SOON ✦ BATHURST NSW ✦ REAL ESTATE ✦ SALES ✦ PROPERTY MANAGEMENT ✦ BUYERS AGENCY ✦ BXREALTY.COM.AU ✦</span>
+        <span style="padding-right:60px;">BX REALTY ✦ COMING SOON ✦ BATHURST NSW ✦ REAL ESTATE ✦ SALES ✦ PROPERTY MANAGEMENT ✦ BUYERS AGENCY ✦ BXREALTY.COM.AU ✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer style="
+    position: relative; z-index: 10;
+    padding: 20px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: .62rem;
+    color: rgba(255,255,255,.22);
+    letter-spacing: .1em; text-transform: uppercase;
+  ">
+    <span>© 2025 BX Realty Pty Ltd — All rights reserved</span>
+    <a href="https://yherhr.github.io/Max-Portfolio/"
+       target="_blank" rel="noopener noreferrer"
+       style="color:rgba(225,186,98,.5); text-decoration:none; transition:color .2s;"
+       onmouseover="this.style.color='#e1ba62';"
+       onmouseout="this.style.color='rgba(225,186,98,.5)';">
+      Made by Max ↗
+    </a>
+  </footer>
+
+</body>
+</html>
